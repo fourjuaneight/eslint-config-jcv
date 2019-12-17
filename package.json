@@ -14,6 +14,9 @@
   "repository": "git@github.com:fourjuaneight/eslint-config-jcv.git",
   "author": "Juan Villela <juan@villela.co>",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "peerDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
