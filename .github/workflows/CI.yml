@@ -26,13 +26,3 @@ jobs:
         npm test
       env:
         CI: true
-
-  publish:
-    name: Publish
-    runs-on: ubuntu-latest
-    steps:
-      - name: publish to GitHub and NPM registries
-        uses: mikeal/merge-release@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
