@@ -12,8 +12,6 @@ module.exports = {
     'jsx-a11y/href-no-hash': 'off',
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
     'jsx-a11y/label-has-for': 0,
-    'react-hooks/exhaustive-deps': 'warn',
-    'react-hooks/rules-of-hooks': 'error',
     'react/display-name': 1,
     'react/forbid-prop-types': 0,
     'react/jsx-filename-extension': [
@@ -27,5 +25,7 @@ module.exports = {
     'react/prefer-stateless-function': 0,
     'react/react-in-jsx-scope': 0,
     'react/require-default-props': 0,
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
   },
 };
