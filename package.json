@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-418",
+  "name": "eslint-config-jcv",
   "version": "0.0.1",
   "description": "Sensible ESLint and Prettier setup",
   "keywords": [
@@ -11,7 +11,7 @@
     "prettier"
   ],
   "main": "index.js",
-  "repository": "git@github.com:fourjuaneight/eslint-config-418.git",
+  "repository": "git@github.com:fourjuaneight/eslint-config-jcv.git",
   "author": "Juan Villela <juan@villela.co>",
   "license": "MIT",
   "peerDependencies": {

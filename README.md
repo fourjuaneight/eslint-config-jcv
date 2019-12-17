@@ -17,7 +17,7 @@ We're reasonable people, so let's install this locally.
 2. Install the config's dependencies:
 
 ```
-npx install-peerdeps --dev eslint-config-418
+npx install-peerdeps --dev eslint-config-jcv
 ```
 
 3. You can see in your package.json there is now a big list of devDependencies.
@@ -27,7 +27,7 @@ npx install-peerdeps --dev eslint-config-418
 ```json
 {
   "extends": [
-    "418"
+    "jcv"
   ]
 }
 ```
