@@ -1,4 +1,4 @@
-name: ESLint Test CI
+name: Test and Publish CI
 
 on: [push]
 
@@ -26,3 +26,8 @@ jobs:
         npm test
       env:
         CI: true
+    - name: Publish
+      uses: mikeal/merge-release@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_PAT }}
