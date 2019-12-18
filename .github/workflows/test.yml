@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node }}
-    - name: Install Packages
+    - name: Install dependencies
       run: npm ci
     - name: Install ESLint ${{ matrix.eslint }}
       # Need to execute this command twice because of npm's bug.
@@ -30,5 +30,7 @@ jobs:
       run: |
         npm install --no-save eslint@${{ matrix.eslint }}
         npm install --no-save eslint@${{ matrix.eslint }}
+    - name: Install React for JSX testing
+      run: npm install react
     - name: Test
       run: npm test
