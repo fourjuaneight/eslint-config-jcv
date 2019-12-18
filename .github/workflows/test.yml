@@ -38,14 +38,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - name: npm install
+        run: npm ci
+      - name: publish
         run: |
           npm config set registry https://registry.npmjs.org/
           npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
-          npm ci
           npm run publish
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
@@ -55,13 +58,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@fourjuaneight'
-        run: |
-          npm ci
-          npm publish
+      - name: npm install
+        run: npm ci
+      - name: publish
+        run: npm run trypublish
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

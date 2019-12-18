@@ -51,6 +51,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "test": "npm run lint && tape test/*.js"
+    "test": "npm run lint && tape test/*.js",
+    "trypublish": "npm publish || true"
   }
 }
