@@ -1,5 +1,5 @@
-# Sensible ESLint and Prettier setup
-Personal config for ESLint and Prettier. I guess you can use em too.
+# Unnecessary ESLint and Prettier setup
+Personally unnecessary config for ESLint and Prettier. I guess you can use it too, though there's hardly anything in it.
 
 ## What it does
 * Lints JavaScript based on the latest standards
@@ -56,4 +56,4 @@ Alternatively, you can put this object in your `package.json` under the property
 6. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
 
 
-_Setup and instructions "inspired" by [Wes Bos' No-Sweat™ config](https://github.com/wesbos/eslint-config-wesbos/)_
+_Setup and instructions "inspired" by [Wes Bos' No-Sweat™ config](https://github.com/wesbos/eslint-config-wesbos/)._

@@ -17,102 +17,12 @@ module.exports = {
   },
   plugins: ['html', 'prettier'],
   rules: {
-    'arrow-body-style': [2, 'as-needed'],
-    curly: 2,
-    'dot-notation': 2,
-    'func-names': 0,
     'id-length': [
       2,
       {
-        exceptions: ['i', 'a', 'b'],
+        exceptions: ['a', 'b', 'i', 'x', 'y', 'z'],
       },
     ],
-    import: 0,
-    'import/extensions': 0,
-    'import/extensions': 'error',
-    'import/newline-after-import': 'off',
-    'import/no-named-as-default': 'error',
-    'import/no-amd': 'error',
-    'import/no-commonjs': 'off',
-    'import/no-named-default': 'error',
-    'import/no-namespace': 'off',
-    'import/no-nodejs-modules': 'off',
-    'import/no-unresolved': [2, { caseSensitive: false }],
-    'import/order': [
-      1,
-      {
-        groups: [
-          'builtin',
-          ['external', 'internal'],
-          'parent',
-          ['sibling', 'index'],
-        ],
-      },
-    ],
-    'import/prefer-default-export': 0,
-    'linebreak-style': 0,
-    'no-alert': 0,
-    'no-await-in-loop': 0,
-    'no-console': [
-      'error',
-      {
-        allow: ['error', 'warn'],
-      },
-    ],
-    'no-const-assign': 2,
-    'no-debugger': 0,
-    'no-dupe-class-members': 2,
-    'no-else-return': 2,
-    'no-inner-declarations': 2,
-    'no-lonely-if': 2,
-    'no-magic-numbers': 'off',
-    'no-nested-ternary': 'off',
-    'no-param-reassign': [
-      2,
-      {
-        props: false,
-      },
-    ],
-    'no-return-assign': ['error', 'except-parens'],
-    'no-restricted-syntax': [
-      2,
-      'ForInStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
-    'no-shadow': [
-      2,
-      {
-        hoist: 'all',
-        allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
-      },
-    ],
-    'no-unneeded-ternary': 2,
-    'no-unused-expressions': [
-      2,
-      {
-        allowTaggedTemplates: true,
-      },
-    ],
-    'no-unused-vars': [
-      1,
-      {
-        ignoreSiblings: true,
-        argsIgnorePattern: 'res|next|^err',
-      },
-    ],
-    'no-useless-return': 2,
-    'no-var': 2,
-    'one-var': [2, 'never'],
-    'prefer-arrow-callback': 2,
-    'prefer-const': [
-      'error',
-      {
-        destructuring: 'all',
-      },
-    ],
-    'prefer-promise-reject-errors': 2,
-    quotes: ['error', 'single'],
     'prettier/prettier': [
       'error',
       {
@@ -137,18 +47,5 @@ module.exports = {
         ],
       },
     ],
-    radix: 0,
-    'sort-imports': 0,
-    'sort-keys': [
-      2,
-      'asc',
-      {
-        caseSensitive: true,
-        natural: true,
-      },
-    ],
-    'sort-vars': 2,
-    'space-before-function-paren': 0,
-    strict: [2, 'global'],
   },
 };

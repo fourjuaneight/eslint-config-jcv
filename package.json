@@ -1,7 +1,7 @@
 {
   "name": "@fourjuaneight/eslint-config-jcv",
-  "version": "0.0.3",
-  "description": "Sensible ESLint and Prettier setup",
+  "version": "0.0.4",
+  "description": "Unnecessary ESLint and Prettier setup",
   "keywords": [
     "javascript",
     "ecmascript",
