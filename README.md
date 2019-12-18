@@ -1,4 +1,8 @@
 # Unnecessary ESLint and Prettier setup
+
+[![npm version](https://img.shields.io/npm/v/eslint-config-jcv)](https://www.npmjs.com/package/eslint-plugin-jcv)
+![badge](https://action-badges.now.sh/fourjuaneight/eslint-config-jcv)
+
 Personally unnecessary config for ESLint and Prettier. I guess you can use it too, though there's hardly anything in it.
 
 ## What it does
