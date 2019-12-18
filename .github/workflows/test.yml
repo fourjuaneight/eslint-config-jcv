@@ -3,20 +3,32 @@ name: Test
 on: [push]
 
 jobs:
-  publish-npm:
-    runs-on: ubuntu-latest
+  test:
+    name: Test
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        eslint: [6.x, 5.x]
+        node: [13.x, 12.x, 10.x, 8.x]
+
+    runs-on: ${{ matrix.os }}
+
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - name: npm install
-        run: npm ci
-      - name: publish
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
-          npm publish
-        env:
-          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+    - name: Checkout
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Install Node.js ${{ matrix.node }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+    - name: Install Packages
+      run: npm ci
+    - name: Install ESLint ${{ matrix.eslint }}
+      # Need to execute this command twice because of npm's bug.
+      # See also: https://npm.community/t/error-node-modules-staging-eslint-e7cf6846-node-modules-eslint
+      run: |
+        npm install --no-save eslint@${{ matrix.eslint }}
+        npm install --no-save eslint@${{ matrix.eslint }}
+    - name: Test
+      run: npm test
