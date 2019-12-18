@@ -1,5 +1,5 @@
 {
-  "name": "@fourjuaneight/eslint-config-jcv",
+  "name": "eslint-config-jcv",
   "version": "0.0.4",
   "description": "Unnecessary ESLint and Prettier setup",
   "keywords": [

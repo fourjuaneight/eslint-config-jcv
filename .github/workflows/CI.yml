@@ -38,12 +38,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish
-        uses: mikeal/merge-release@master
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        run: |
+          npm config set registry https://registry.npmjs.org/
+          npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
+          npm run trypublish
         env:
+          CI: true
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
   publish-gpr:
-    needs: publish-npm
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Publish
@@ -53,7 +59,9 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@fourjuaneight'
-      - run: npm ci
-      - run: npm publish
+        run: |
+          npm ci
+          npm publish
         env:
+          CI: true
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
