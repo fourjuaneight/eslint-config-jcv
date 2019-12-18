@@ -1,4 +1,4 @@
-name: Test and Publish
+name: Test
 
 on: [push]
 
@@ -37,22 +37,23 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Publish
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org/
         run: |
           npm config set registry https://registry.npmjs.org/
           npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
-          npm run trypublish
+          npm ci
+          npm run publish
         env:
-          CI: true
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
   publish-gpr:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Publish
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
@@ -63,5 +64,4 @@ jobs:
           npm ci
           npm publish
         env:
-          CI: true
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
