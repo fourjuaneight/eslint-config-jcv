@@ -15,9 +15,6 @@
     "type": "git",
     "url": "ssh://git@github.com/fourjuaneight/eslint-config-jcv.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "author": "Juan Villela <juan@villela.co>",
   "license": "MIT",
   "peerDependencies": {
