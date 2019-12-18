@@ -32,6 +32,16 @@ npx install-peerdeps --dev eslint-config-jcv
 }
 ```
 
+For React projects:
+```json
+{
+  "extends": [
+    "jcv"
+    "jcv/react"
+  ]
+}
+```
+
 Alternatively, you can put this object in your `package.json` under the property `"eslintConfig":`.
 
 5. You can add two scripts to your package.json to lint and/or fix:
