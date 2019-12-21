@@ -24,7 +24,6 @@ jobs:
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
   publish-gpr:
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
