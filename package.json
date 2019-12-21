@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jcv",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Unnecessary ESLint and Prettier setup",
   "keywords": [
     "javascript",
