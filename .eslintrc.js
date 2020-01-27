@@ -23,6 +23,12 @@ module.exports = {
         exceptions: ['a', 'b', 'i', 'x', 'y', 'z'],
       },
     ],
+    'no-console': [
+      'error',
+      {
+        allow: ['error'],
+      }
+    ],
     'prettier/prettier': [
       'error',
       {
