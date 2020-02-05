@@ -9,6 +9,7 @@ module.exports = {
       },
     ],
     'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
     'react/jsx-filename-extension': [
       1,
       {
