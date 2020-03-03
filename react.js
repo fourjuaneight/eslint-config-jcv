@@ -8,13 +8,14 @@ module.exports = {
         aspects: ['invalidHref'],
       },
     ],
-    'jsx-a11y/href-no-hash': 'off',
-    'jsx-a11y/label-has-associated-control': 'off',
+    'jsx-a11y/href-no-hash': 0,
+    'jsx-a11y/label-has-associated-control': 0,
     'react/jsx-filename-extension': [
       1,
       {
         extensions: ['.js', '.jsx'],
       },
     ],
+    'react/no-danger': 0,
   },
 };

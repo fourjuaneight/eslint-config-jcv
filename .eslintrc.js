@@ -29,6 +29,7 @@ module.exports = {
         allow: ['error'],
       }
     ],
+    'no-nested-ternary': 0,
     'prettier/prettier': [
       'error',
       {
