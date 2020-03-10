@@ -20,7 +20,7 @@ module.exports = {
     'id-length': [
       2,
       {
-        exceptions: ['a', 'b', 'i', 'x', 'y', 'z'],
+        exceptions: ['_', 'a', 'b', 'i', 'x', 'y', 'z'],
       },
     ],
     'no-console': [
