@@ -18,15 +18,15 @@
   "author": "Juan Villela <juan@villela.co>",
   "license": "MIT",
   "dependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "babel-eslint": "^10.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2"
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1"
   },
   "peerDependencies": {
     "eslint": "^6.5.1",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "eslint": "^6.5.1",
     "prettier": "^1.18.2",
-    "tape": "^4.12.0"
+    "tape": "^4.13.2"
   },
   "scripts": {
     "lint": "eslint .",
