@@ -23,13 +23,13 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
     - name: Install dependencies
-      run: npm ci
+      run: npm i
     - name: Install ESLint ${{ matrix.eslint }}
       # Need to execute this command twice because of npm's bug.
       # See also: https://npm.community/t/error-node-modules-staging-eslint-e7cf6846-node-modules-eslint
       run: |
-        npm install --no-save eslint@${{ matrix.eslint }}
-        npm install --no-save eslint@${{ matrix.eslint }}
+        npm i --no-save eslint@${{ matrix.eslint }}
+        npm i --no-save eslint@${{ matrix.eslint }}
     - name: Install React for JSX testing
       run: npm install react
     - name: Test
