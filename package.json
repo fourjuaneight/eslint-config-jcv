@@ -35,7 +35,7 @@
   "devDependencies": {
     "eslint": "^6.5.1",
     "prettier": "^1.18.2",
-    "tape": "^4.13.2"
+    "tape": "^5.0.1"
   },
   "scripts": {
     "lint": "eslint .",
