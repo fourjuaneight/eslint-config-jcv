@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb": "^19.0.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-html": "^6.0.2",
     "eslint-plugin-import": "^2.20.2",
